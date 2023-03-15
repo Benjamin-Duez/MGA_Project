@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "MyCharacter.generated.h"
+#include "Lovecraft_Character.generated.h"
 
 UCLASS()
-class MGA_LOVECRAFT_API AMyCharacter : public ACharacter
+class MGA_LOVECRAFT_API ALovecraft_Character : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AMyCharacter();
+	ALovecraft_Character();
 
 protected:
 	// Called when the game starts or when spawned
