@@ -15,7 +15,6 @@ ALovecraft_Character::ALovecraft_Character()
 void ALovecraft_Character::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame

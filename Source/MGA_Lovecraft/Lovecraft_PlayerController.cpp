@@ -10,5 +10,5 @@ float ALovecraft_PlayerController::computeCost(AController* Controller, FVector 
 	if (NavSys != nullptr) {
 		NavSys->GetPathCost(start, end, cost);
 	}
-	return cost;
+	return ((float)((int) cost))/100;
 }
