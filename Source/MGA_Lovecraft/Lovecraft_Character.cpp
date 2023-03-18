@@ -1,6 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
+#include "CoreMinimal.h"
+#include "GameFramework/Character.h"
+#include "NavigationSystem.h"
+#include "Blueprint/AIBlueprintHelperLibrary.h"
+#include "Lovecraft_PlayerController.h"
 #include "Lovecraft_Character.h"
 
 // Sets default values
@@ -29,5 +34,18 @@ void ALovecraft_Character::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void ALovecraft_Character::MoveToLocation(FVector TargetLocation)
+{
+    UNavigationSystemV1* NavSystem = UNavigationSystemV1::GetCurrent(GetWorld());
+    if (NavSystem)
+    {
+        FVector NavLocation;
+        if (NavSystem->K2_ProjectPointToNavigation(GetWorld(), TargetLocation, NavLocation))
+        {
+            UAIBlueprintHelperLibrary::SimpleMoveToLocation(GetController(), NavLocation);
+        }
+    }
 }
 
