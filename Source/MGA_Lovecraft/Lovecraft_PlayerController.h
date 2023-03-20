@@ -64,7 +64,7 @@ public:
 	UFUNCTION()
 	void SetupInputComponent();
 
-	UFUNCTION()
+	//UFUNCTION()
 	//void OnMoveToMouseCursor();
 
 	UFUNCTION(BlueprintCallable)
