@@ -5,7 +5,7 @@
 #include "GameFramework/Character.h"
 #include "NavigationSystem.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
-#include "Lovecraft_PlayerController.h"
+//#include "Lovecraft_PlayerController.h"
 #include "Lovecraft_Character.h"
 
 // Sets default values
@@ -26,6 +26,7 @@ void ALovecraft_Character::BeginPlay()
 void ALovecraft_Character::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 
 }
 

@@ -20,7 +20,8 @@ ALovecraft_PlayerController::ALovecraft_PlayerController()
 	Character3 = GetWorld()->SpawnActor<ALovecraft_Character>();
 
 	// Set the first character as the active character
-	ActiveCharacter = Character1;
+	ActiveCharacter = Character1;    
+
 }
 
 void ALovecraft_PlayerController::SwitchToCharacter1()
@@ -42,6 +43,8 @@ void ALovecraft_PlayerController::SetupInputComponent()
 {
     Super::SetupInputComponent();
 
+    
+
     // Bind input axes for movement and look
     /*
     InputComponent->BindAxis("MoveForward", this, &AMyPlayerController::MoveForward);
@@ -59,6 +62,7 @@ void ALovecraft_PlayerController::SetupInputComponent()
     InputComponent->BindAction("MoveToMouseCursor", IE_Pressed, this, &ALovecraft_PlayerController::OnMoveToMouseCursor);
 }
 
+/*
 void ALovecraft_PlayerController::OnMoveToMouseCursor()
 {
     if (ActiveCharacter != nullptr)
@@ -71,11 +75,12 @@ void ALovecraft_PlayerController::OnMoveToMouseCursor()
         UNavigationSystemV1* NavSystem = UNavigationSystemV1::GetCurrent(GetWorld());
         if (NavSystem != nullptr)
         {
-            FVector NavLocation = NavSystem->GetRandomPointInNavigableRadius(HitResult.Location, 100.0f);
+            //FVector NavLocation = NavSystem->GetRandomPointInNavigableRadius(HitResult.Location, 100.0f);
+            FVector NavLocation = NavSystem->GetRandomPointInNavigableRadius(GetWorld(),)
             ActiveCharacter->MoveToLocation(NavLocation);
         }
     }
-}
+}*/
 
 
 /*
@@ -95,11 +100,7 @@ void ALovecraft_PlayerController::OnMoveToMouseCursor()
         }
     }
 }
-
 */
-
-
-
 
 
 float ALovecraft_PlayerController::computeCost(AController* Controller, FVector start, FVector end) {

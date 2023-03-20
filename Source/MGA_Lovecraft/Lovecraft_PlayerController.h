@@ -50,13 +50,13 @@ public:
 
 
 	
-	UFUNCTION(EditAnywhere, BlueprintReadWrite)
+	UFUNCTION(BlueprintCallable)
 	void SwitchToCharacter1();
 
-	UFUNCTION(EditAnywhere, BlueprintReadWrite)
+	UFUNCTION(BlueprintCallable)
 	void SwitchToCharacter2();
 
-	UFUNCTION(EditAnywhere, BlueprintReadWrite)
+	UFUNCTION(BlueprintCallable)
 	void SwitchToCharacter3();
 
 	

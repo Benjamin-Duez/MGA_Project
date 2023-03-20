@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "NavigationSystem.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
-#include "Lovecraft_PlayerController.h"
+//#include "Lovecraft_PlayerController.h"
 #include "Lovecraft_Character.generated.h"
 
 UCLASS()
@@ -29,7 +29,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UFUNCTION(EditAnywhere, BlueprintReadWrite)
+	UFUNCTION(BlueprintCallable)
 	virtual void MoveToLocation(FVector TargetLocation);
 
 };
