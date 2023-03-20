@@ -65,7 +65,7 @@ public:
 	void SetupInputComponent();
 
 	UFUNCTION()
-	void OnMoveToMouseCursor();
+	//void OnMoveToMouseCursor();
 
 	UFUNCTION(BlueprintCallable)
 	float computeCost(AController* Controller, FVector start, FVector end);

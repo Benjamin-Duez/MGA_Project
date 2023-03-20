@@ -1,13 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "CoreMinimal.h"
-#include "GameFramework/PlayerController.h"
-#include "NavigationSystem.h"
-#include "Lovecraft_Character.h"
 #include "Lovecraft_PlayerController.h"
-
-
 
 ALovecraft_PlayerController::ALovecraft_PlayerController() 
 {
@@ -59,7 +53,7 @@ void ALovecraft_PlayerController::SetupInputComponent()
     InputComponent->BindAction("SwitchToCharacter3", IE_Pressed, this, &ALovecraft_PlayerController::SwitchToCharacter3);
 
     // Bind input actions for movement
-    InputComponent->BindAction("MoveToMouseCursor", IE_Pressed, this, &ALovecraft_PlayerController::OnMoveToMouseCursor);
+    //InputComponent->BindAction("MoveToMouseCursor", IE_Pressed, this, &ALovecraft_PlayerController::OnMoveToMouseCursor);
 }
 
 /*

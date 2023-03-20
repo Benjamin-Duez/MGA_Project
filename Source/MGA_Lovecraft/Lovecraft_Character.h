@@ -29,7 +29,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UFUNCTION(BlueprintCallable)
-	virtual void MoveToLocation(FVector TargetLocation);
+	//UFUNCTION(BlueprintCallable)
+	//virtual void MoveToLocation(FVector TargetLocation);
 
 };
